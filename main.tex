@@ -1,0 +1,318 @@
+\documentclass[10.5pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=0.8 cm, % seperation between body and page edge from the top
+    bottom=0.4 cm, % seperation between body and page edge from the bottom
+    left=0.8 cm, % seperation between body and page edge from the left
+    right=0.8 cm, % seperation between body and page edge from the right
+    footskip=0.4 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Mustafa Mehmood's CV},
+    pdfauthor={Mustafa Mehmood},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+
+
+
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.12 cm
+}{
+    % bottom space:
+    0.12 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.03cm, % Space above the list
+        parsep=0.03cm, % Space between paragraphs
+        partopsep=0pt, % Additional space when the list starts a new paragraph
+        itemsep=0.03cm, % Space between list items
+        leftmargin=0.4cm % Left margin
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.15}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    )
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+
+    
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+    \textbf{\fontsize{18 pt}{18 pt}\selectfont Mustafa Mehmood}
+
+    \vspace{0.01 cm}
+
+    \normalsize
+    
+    \mbox{\hrefWithoutArrow{mailto:mustafamehmood8998@gmail.com}{\color{black}{mustafamehmood8998@gmail.com}}}
+    \textbf{\,\textperiodcentered\,}
+    {Open to Relocate}
+    \textbf{\,\textperiodcentered\,}
+    \mbox{\hrefWithoutArrow{tel:+44-7769-504-569}{\color{black}{+44 7769 504 569}}}
+    \textbf{\,\textperiodcentered\,}
+    \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/mustafa-meh}{\color{black}{LinkedIn}}}
+    \textbf{\,\textperiodcentered\,}
+    \mbox{\hrefWithoutArrow{https://github.com/mustafameh}{\color{black}{GitHub }}}
+    
+\end{header}
+
+\fontsize{10.2}{11.2}\selectfont
+
+\section{Experience}
+
+\vspace{0.05 cm}
+
+        \begin{twocolentry}{
+        \textit{London, UK}   
+            
+        \textit{June 2025 – Present}}
+            \textbf{Applied Scientist \& Applied Research Intern}
+            
+            \textit{Thomson Reuters}
+        \end{twocolentry}
+\vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Initially hired as a 4-month intern; extended twice to 18 months based on performance to take on full-time Applied Scientist responsibilities.
+                \item Building tool-augmented multi-agent systems for cross-document risk assessment and extraction over high-stakes legal documents, supporting due diligence in M\&A transactions.
+                \item Designed an adversarial multi-agent evaluation pipeline that reverse-engineered expert grading criteria from audit sheets, achieving 90\%+ failure detection with 0.88 Pearson correlation to expert grades to reducing the evaluation feedback loop from days to hours and enabling rapid iteration on solution development.
+                \item Fine-tuned LLMs for specialized legal use cases including long-form contract drafting, customization, and summarization.
+            \end{highlights}
+        \end{onecolentry}
+
+\vspace{0.12 cm}
+        
+        \begin{twocolentry}{
+        \textit{Nottingham, UK}   
+            
+        \textit{May 2024 – May 2025}}
+            \textbf{LLM Data Integrity Specialist}
+            
+            \textit{Outlier AI}
+        \end{twocolentry}
+\vspace{0.06 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Improved tool usage and function-calling capabilities of advanced reasoning LLMs through RLHF training pipelines, enabling models to infer, chain, and autonomously execute multi-step complex actions from high-level user intent, powering AI solutions for tech firms including Google and Meta.
+                \item Curated and cleaned training datasets in collaboration with domain experts, achieving a 20\% improvement in instruction adherence.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        
+\vspace{0.12 cm}
+        \begin{twocolentry}{
+        \textit{Selangor, Malaysia}   
+            
+        \textit{June 2021 - Aug 2023}}
+            \textbf{Data Scientist Intern }
+            
+            \textit{Department of Neuroscience, University of Nottingham Malaysia}
+        \end{twocolentry}
+\vspace{0.06 cm}
+        
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Engineered feature extraction pipelines to transform raw EEG and eye-tracking clinical data into structured features: coherence, Hjorth parameters, and spectral power bands for EEG; gaze patterns and fixation analysis for eye-tracking.
+                \item Trained predictive models for neurological and mental health disorder diagnosis, achieving 80\% accuracy for Parkinson's and 82\% for Schizophrenia from EEG signals, and 92\% for Autism from eye-tracking data.
+            \end{highlights}
+        \end{onecolentry}  
+
+\section{Education}
+\begin{twocolentry}{
+    \textit{Nottingham, UK}   
+    
+    \textit{Sept 2023 – Dec 2024}
+    \textit{Sept 2020 – Aug 2023}}
+    \textbf{University of Nottingham}
+
+    \textit{\textbf{MSc} Artificial Intelligence - \textbf{Grade}: \textbf{Distinction}}
+
+    \textit{\textbf{BSc} Computer Science \textbf{(Hons)}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+\textbf{\textit{Key Modules}}: Machine Learning, Computer Vision, Natural Language Processing, Big Data, Information Visualisation
+\end{onecolentry}
+
+    \section{Key Projects}
+    \vspace{0.05 cm}
+    \textbf{Sherlock-AI: Character Emulation with LLMs} 
+    
+    \begin{twocolentry}{ 
+            \vspace{0.10 cm} 
+    {\href{https://github.com/mustafameh/Sherlock-LLM}{Repo}}{}
+        
+        }
+            {\textit{Hugging Face Transformers, LoRA, Flask}}
+        \end{twocolentry}
+
+
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Designed a resource-efficient, transferable character emulation pipeline: fine-tuned a quantized LLaMA model with \textit{LoRA} for Sherlock Holmes emulation, automating dialogue extraction from public domain texts and deploying on \textit{RunPod}.
+        
+        \item Created a web chat application for Sherlock role-play, integrating the fine-tuned model and external language models via \textit{OpenRouter} with text-to-speech, character customizability and PostgreSQL-based chat management.
+        
+        \item   In A/B testing, 72.4\% of users favoured fine-tuned model over baseline for authenticity, with perfect usability scores.
+    \end{highlights}
+      \end{onecolentry}  
+\vspace{0.2 cm}
+\textbf{CourseCompanion: RAG-Powered Course Assistant} \hfill {\href{https://github.com/mustafameh/Course-Content-Q-A}{Repo}}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a scalable educational platform enabling professors to create AI teaching assistants that auto-generate knowledge bases from course materials, featuring chat interfaces, FAQ system, and management dashboards; built with Flask and PostgreSQL using RAG with LangChain and Flair for context-aware responses, deployed on DigitalOcean with Google Drive integration.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+\textbf{DeepGaze: Autism Diagnosis with ML and Webcam Eye-Tracking} \hfill {\href{https://youtu.be/c82RrlJVLvo}{Demo Video} \href{https://github.com/mustafameh/Automatic-Autism-Diagnosis-Eyetracking-Machinelearning-Research-Webapplication}{Repo}}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Designed approaches for early autism detection from eye-tracking data visualized as images, combining PCA with sklearn classifiers and a custom Keras CNN with transfer learning to achieve 92\% accuracy; built a modular Flask web app for webcam-based data collection, visualization, prediction, and model retraining.
+    \end{highlights}
+\end{onecolentry}
+
+
+\section{Publication}
+
+\noindent
+\textbf{Mehmood, M.}, Amin, H. U. (2024). Pre-diagnosis for Autism Spectrum Disorder Using Eye-Tracking and Machine Learning Techniques. \textit{Advances in Brain Inspired Cognitive Systems}, Springer Nature Singapore. \href{https://doi.org/10.1007/978-981-97-1417-9\_23}{}
+
+\vspace{0.15cm}
+\section{Technical Skills}    
+\begin{onecolentry}
+\textbf{Programming Languages:} Python, C, Java, JavaScript, R, Haskell, SQL, MATLAB, HTML/CSS
+\end{onecolentry}
+
+\vspace{0.1cm}
+\begin{onecolentry}
+\textbf{Libraries \& Frameworks:}
+TensorFlow, PyTorch, Hugging Face (Transformers, trl), scikit-learn, LangChain,
+NLTK, spaCy, Pydantic AI, OpenCV, Flask, REST APIs,  matplotlib, seaborn, plotly, D3.js, Claude Agent SDK
+\end{onecolentry}
+
+\vspace{0.1cm}
+\begin{onecolentry}
+\textbf{Tools \& Platforms:}
+Git (GitHub, GitLab CI), Docker, AWS (SageMaker, EC2, Lambda, Bedrock),
+Apache Spark/Databricks, PostgreSQL, Runpod, DigitalOcean, Power Bi, Claude Code, Cursor
+\end{onecolentry}
+
+
+\end{document}
