@@ -181,18 +181,17 @@
         \textit{London, UK}   
             
         \textit{June 2025 – Present}}
-            \textbf{Applied Scientist \& Applied Research Intern}
+            \textbf{Applied Scientist}
             
             \textit{Thomson Reuters}
         \end{twocolentry}
 \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Hired as 4-month intern initially; contract extended based on performance to take full-time Applied Scientist responsibilities.
-                \item Building tool-augmented multi-agent systems for cross-document risk assessment and extraction over high-stakes legal documents, supporting due diligence in M\&A transactions.
-                \item Designed an adversarial multi-agent evaluation pipeline for agentic solutions,
-achieving 90\%+ failure detection rate with 0.78 Cohen's Kappa correlation to expert grades reducing the solution development feedback loop from days to hours and enabling rapid iteration on solution development
-                \item Fine-tuned LLMs for specialized legal use case s including long-form contract drafting, customization, and summarization.
+                \item Hired as 6-month intern initially; contract extended based on performance to take full-time Applied Scientist responsibilities.
+                \item Building tool and retrieval-augmented multi-agent systems in collaboration with legal experts to extract and assess risks across high-stakes legal documents supporting M\&A transactions, identifying 90\%+ of all potential risks.
+                \item Designed an adversarial evaluation pipeline for agentic solutions with 90\%+ failure detection rate (0.78 Cohen's Kappa vs. expert grades). Eliminated slow manual evaluation bottlenecks, cutting the solution development feedback loop from days to hours.
+                \item Fine-tuned LLMs for specialized legal use cases including long-form contract drafting, customization, and summarization.
             \end{highlights}
         \end{onecolentry}
 
@@ -210,7 +209,7 @@ achieving 90\%+ failure detection rate with 0.78 Cohen's Kappa correlation to ex
         \begin{onecolentry}
             \begin{highlights}
                 \item Improved tool usage and function-calling capabilities of advanced reasoning LLMs through RLHF training pipelines, enabling models to infer, chain, and autonomously execute multi-step complex actions from high-level user intent, powering AI solutions for tech firms including Google and Meta.
-                \item Curated and cleaned training datasets in collaboration with domain experts, achieving a 20\% improvement in instruction adherence.
+                \item Curated and cleaned training datasets alongside domain experts, achieving a 20\% improvement in instruction adherence.
             \end{highlights}
         \end{onecolentry}
 
@@ -253,27 +252,22 @@ achieving 90\%+ failure detection rate with 0.78 Cohen's Kappa correlation to ex
 
     \section{Key Projects}
     \vspace{0.05 cm}
-    \textbf{Sherlock-AI: Character Emulation with LLMs} 
-    
-    \begin{twocolentry}{ 
-            \vspace{0.10 cm} 
-    {\href{https://agentic-sherlock.vercel.app/}{Website} \href{https://github.com/mustafameh/Sherlock-LLM}{Repo}}{}
-        
-        }
-            {\textit{Hugging Face Transformers, LoRA, Flask}}
-        \end{twocolentry}
-
-
+    \textbf{Sherlock-AI: Character Emulation with LLMs} \hfill {\href{https://agentic-sherlock.vercel.app/}{Website} \href{https://github.com/mustafameh/Sherlock-LLM}{Repo}}
 
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed a resource-efficient, transferable character emulation pipeline: fine-tuned a quantized LLaMA model with \textit{LoRA} for Sherlock Holmes emulation, automating dialogue extraction from public domain texts and deploying on \textit{RunPod}.
+        \item Designed a resource-efficient, transferable character emulation pipeline: fine-tuned a quantized LLaMA model with \textit{LoRA} for Sherlock Holmes emulation, automating dialogue extraction and synthetic data generation from public domain texts.
         
-        \item Created a web chat application for Sherlock role-play, integrating the fine-tuned model and external language models via \textit{OpenRouter} with text-to-speech, character customizability and PostgreSQL-based chat management.
+        \item Implemented ReAct-style reasoning for multi-step deductive analysis with dual inference support (OpenRouter API and local GGUF), optimizing for performance and cost across cloud and local setups.
+
+\item Built an interactive story mode where users play as characters in branching Sherlock Holmes mysteries through structured decisions and free-form actions, using templated prompts with streaming structured output to deliver real-time scene generation, configurable writing styles, and auto-generated context summaries.
+
         
-        \item   In A/B testing, 72.4\% of users favoured fine-tuned model over baseline for authenticity, with perfect usability scores.
+        \item In A/B testing, 72.4\% of users favoured the fine-tuned model over baseline for authenticity, with perfect usability scores.
     \end{highlights}
-      \end{onecolentry}  
+\end{onecolentry}
+
+  
 \vspace{0.2 cm}
 \textbf{CourseCompanion: RAG-Powered Course Assistant} \hfill {\href{https://github.com/mustafameh/Course-Content-Q-A}{Repo}}
 
@@ -306,15 +300,14 @@ achieving 90\%+ failure detection rate with 0.78 Cohen's Kappa correlation to ex
 \vspace{0.1cm}
 \begin{onecolentry}
 \textbf{Libraries \& Frameworks:}
-TensorFlow, PyTorch, Hugging Face (Transformers, trl), scikit-learn, LangChain,
-NLTK, spaCy, Pydantic AI, OpenCV, Flask, REST APIs,  matplotlib, seaborn, plotly, D3.js, Claude Agent SDK
+PyTorch, TensorFlow, Hugging Face (Transformers, trl), scikit-learn, LangChain, LangGraph, Pydantic AI, spaCy, vLLM, Flask, pandas, NumPy, Weights \& Biases, Gradio/Streamlit, Claude Agent SDK
 \end{onecolentry}
 
 \vspace{0.1cm}
 \begin{onecolentry}
 \textbf{Tools \& Platforms:}
 Git (GitHub, GitLab CI), Docker, AWS (SageMaker, EC2, Lambda, Bedrock),
-Apache Spark/Databricks, PostgreSQL, Runpod, DigitalOcean, Power Bi, Claude Code, Cursor
+Apache Spark/Databricks, PostgreSQL, Runpod, DigitalOcean, Power BI, Claude Code, Cursor
 \end{onecolentry}
 
 
