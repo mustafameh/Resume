@@ -230,7 +230,8 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Engineered feature extraction pipelines to transform raw EEG and eye-tracking clinical data into structured features: coherence, Hjorth parameters, and spectral power bands for EEG; gaze patterns and fixation analysis for eye-tracking.
-                \item Trained predictive models for neurological and mental health disorder diagnosis, achieving 80\% accuracy for Parkinson's and 82\% for Schizophrenia from EEG signals, and 92\% for Autism from eye-tracking data.
+                \item Built EEG-based diagnostic classifiers for neurological and mental health disorders, reaching 80\% accuracy for Parkinson's and 82\% for Schizophrenia.
+                \item For autism screening, represented gaze scanpaths as images and trained a custom transfer-learning computer vision model, benchmarked against a PCA-based classical pipeline, to reach 92\% accuracy.
             \end{highlights}
         \end{onecolentry}  
 
@@ -282,7 +283,7 @@
 
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed approaches for early autism detection from eye-tracking data visualized as images, combining PCA with sklearn classifiers and a custom Keras CNN with transfer learning to achieve 92\% accuracy; built a modular Flask web app for webcam-based data collection, visualization, prediction, and model retraining.
+        \item Built a modular Flask web app for webcam-based eye-tracking data collection, visualization, real-time prediction, and model retraining, operationalizing the autism-detection method from my publication.
     \end{highlights}
 \end{onecolentry}
 
