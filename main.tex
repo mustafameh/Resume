@@ -192,7 +192,7 @@
                 \item Own evaluation methodology: defined grading criteria with lawyers and designed LLM-as-judge strategies calibrated to expert scores (0.78 \mbox{Cohen's}~$\kappa$), detecting 87.6\% of human-flagged errors; cut eval cycles from days to hours.
                 \item Built an orchestrator agent harness and skill library encoding lawyers' review methodology, plus MCP tools for citation verification, cross-reference resolution and redline comparison.
                 \item Compared context-engineering strategies for long documents (retrieval-then-reason, progressive summarization, sub-agent state passing), yielding up to 4$\times$ fewer orchestrator compactions without loss in recall.
-                \item Fine-tuned LLMs for long-form contract drafting, customization, and summarization.
+                \item Fine-tuned Qwen-32B for clause customization with QLoRA (SFT, then DPO on lawyer preference rankings), matching GPT-4o in lawyer review at 5$\times$+ lower per-token cost.
             \end{highlights}
         \end{onecolentry}
 
