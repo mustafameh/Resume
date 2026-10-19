@@ -27,13 +27,13 @@ jobs:
       - name: Setup pandoc
         uses: pandoc/actions/setup@v1
 
-      - name: Convert to DOCX
+      - name: Convert to DOCX and TXT
         run: python3 tex2docx.py
 
       - name: Commit outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume.pdf resume.docx
-          git diff --cached --quiet || git commit -m "Auto-compile resume.pdf and resume.docx"
+          git add resume.pdf resume.docx resume.txt
+          git diff --cached --quiet || git commit -m "Auto-compile resume.pdf, resume.docx and resume.txt"
           git push

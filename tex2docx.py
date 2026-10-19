@@ -12,6 +12,7 @@ import sys
 SRC = "main.tex"
 TMP = "_pp.tex"
 OUT = "resume.docx"
+OUT_TXT = "resume.txt"
 
 # Neutralize the \href redefinition that appends the faExternalLink arrow.
 # Restoring pandoc-native \href makes every link (header + body) convert.
@@ -47,7 +48,14 @@ def main() -> int:
         fh.write(text)
 
     pandoc = sys.argv[1] if len(sys.argv) > 1 else "pandoc"
-    return subprocess.call([pandoc, TMP, "-f", "latex", "-t", "docx", "-o", OUT])
+    rc = subprocess.call([pandoc, TMP, "-f", "latex", "-t", "docx", "-o", OUT])
+    if rc != 0:
+        return rc
+    # Plain-text copy for the website chatbot, which reads it instead of
+    # parsing LaTeX itself.
+    return subprocess.call(
+        [pandoc, TMP, "-f", "latex", "-t", "plain", "--wrap=none", "-o", OUT_TXT]
+    )
 
 
 if __name__ == "__main__":
