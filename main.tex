@@ -249,14 +249,10 @@
 
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed a resource-efficient, transferable character emulation pipeline: fine-tuned a quantized LLaMA model with \textit{LoRA} for Sherlock Holmes emulation, automating dialogue extraction and synthetic data generation from public domain texts.
-        
-        \item Implemented ReAct-style reasoning for multi-step deductive analysis with dual inference support (OpenRouter API and local GGUF), optimizing for performance and cost across cloud and local setups.
-
-\item Built an interactive story mode where users play as characters in branching Sherlock Holmes mysteries through structured decisions and free-form actions, using templated prompts with streaming structured output to deliver real-time scene generation and auto-generated context summaries.
-
-        
-        \item In A/B testing, 72.4\% of users favoured the fine-tuned model over baseline for authenticity, with perfect usability scores.
+        \item Designed a reusable character-emulation pipeline that auto-extracts dialogue and generates synthetic training data from public-domain texts, used to fine-tune Llama 3.1 8B with QLoRA as Sherlock Holmes.
+        \item In A/B testing, 72.4\% of users preferred the fine-tuned model over the base model for character authenticity.
+        \item Added ReAct-style deductive reasoning, served via OpenRouter API or local GGUF to trade off cost and latency.
+        \item Created an interactive story mode where players shape branching mysteries through choices and free-form actions, with streamed structured output for real-time scene generation and auto-summarized context.
     \end{highlights}
 \end{onecolentry}
 
@@ -266,7 +262,7 @@
 
 \begin{onecolentry}
     \begin{highlights}
-        \item Developed an educational platform enabling professors to create AI teaching assistants that auto-generate knowledge bases from course materials, featuring chat interfaces, FAQ system, and management dashboards; built with Flask and PostgreSQL using FAISS-backed RAG with LangChain and Flair.
+        \item Built a platform for professors to spin up AI teaching assistants that answer student queries over knowledge bases auto-generated from course materials, using FAISS-backed RAG with LangChain, Flask and PostgreSQL.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
