@@ -1,0 +1,87 @@
+Mustafa Mehmood
+
+Applied Scientist    Agentic System Design, Evaluation & Fine-Tuning
+
+mustafamehmood8998@gmail.com    Open to Relocate    +44 7769 504 569    Website    LinkedIn    GitHub 
+
+Experience
+
+London, UK
+
+June 2025 – Present
+
+Applied Scientist
+
+Thomson Reuters (CoCounsel, AI legal assistant)
+
+- Developed core agentic workflows for M&A due-diligence review across hundreds of documents per deal, grounding agents via tools in expert-curated legal sources; achieves 90%+ recall of lawyer-flagged material risks.
+
+- Own evaluation methodology: defined grading criteria with lawyers and designed LLM-as-judge strategies calibrated to expert scores (0.78 Cohen’s κ), detecting 87.6% of human-flagged errors; cut eval cycles from days to hours.
+
+- Built an orchestrator agent harness and skill library encoding lawyers’ review methodology, plus MCP tools for citation verification, cross-reference resolution and redline comparison.
+
+- Compared context-engineering strategies for long documents (retrieval-then-reason, progressive summarization, sub-agent state passing), yielding up to 4× fewer orchestrator compactions without loss in recall.
+
+- Fine-tuned Qwen-32B for clause customization with QLoRA (SFT, then DPO on lawyer preference rankings), matching GPT-4o in lawyer review at 5×+ lower per-token cost.
+
+May 2024 – May 2025
+
+LLM Training Data Specialist (Contract), Outlier AI
+
+- Wrote multi-step tool-use trajectories that teach models to chain actions from high-level user intent, plus ideal responses and preference rankings on expert computer science and ML tasks for frontier AI labs.
+
+- Reviewed expert submissions and curated datasets, contributing to a 20% gain in model instruction adherence.
+
+June 2021 – Aug 2023
+
+Data Scientist Intern (Part-Time), University of Nottingham
+
+- Built feature-extraction pipelines for clinical EEG and eye-tracking data (spectral power, coherence, gaze fixations).
+
+- Trained diagnostic classifiers reaching 80% accuracy for Parkinson’s and 82% for schizophrenia from EEG, and 92% for autism by encoding gaze scanpaths as images for a transfer-learning vision model.
+
+Education
+
+Nottingham, UK
+
+Sept 2023 – Dec 2024 Sept 2020 – Aug 2023
+
+University of Nottingham
+
+MSc Artificial Intelligence - Grade: Distinction
+
+BSc Computer Science (Hons)
+
+Key Projects
+
+Sherlock-AI: Character Emulation with LLMs Website Repo
+
+- Designed a reusable character-emulation pipeline that auto-extracts dialogue and generates synthetic training data from public-domain texts, used to fine-tune Llama 3.1 8B with QLoRA as Sherlock Holmes.
+
+- In A/B testing, 72.4% of users preferred the fine-tuned model over the base model for character authenticity.
+
+- Added ReAct-style deductive reasoning, served via OpenRouter API or local GGUF to trade off cost and latency.
+
+- Created an interactive story mode where players shape branching mysteries through choices and free-form actions, with streamed structured output for real-time scene generation and auto-summarized context.
+
+CourseCompanion: RAG-Powered Course Assistant Repo
+
+- Built a platform for professors to spin up AI teaching assistants that answer student queries over knowledge bases auto-generated from course materials, using FAISS-backed RAG with LangChain, Flask and PostgreSQL.
+
+DeepGaze: Autism Diagnosis with ML and Webcam Eye-Tracking Demo Video Repo
+
+- Built a modular Flask web app for webcam-based eye-tracking data collection, visualization, real-time prediction, and model retraining, operationalizing the autism-detection method from my publication.
+
+Publication
+
+Mehmood, M., Amin, H. U. (2024). Pre-diagnosis for Autism Spectrum Disorder Using Eye-Tracking and Machine Learning Techniques. Advances in Brain Inspired Cognitive Systems, Springer Nature Singapore.
+
+Technical Skills
+
+LLMs & Agents: LangGraph, LangChain, Pydantic AI, Claude Agent SDK, Claude Code, MCP, tool calling, structured output, RAG (BM25, FAISS, Pinecone), OpenAI/Azure, Anthropic APIs, harness design, context engineering
+
+Training & Evaluation: PyTorch, Hugging Face (Transformers, trl, PEFT), Unsloth, bitsandbytes, QLoRA, SFT, DPO, synthetic data, LLM-as-judge evals, A/B testing, Langfuse, Weights & Biases
+
+ML & Data: scikit-learn, TensorFlow/Keras, spaCy, Spark, vision (CNNs, transfer learning), speech (ASR, Coqui TTS)
+
+Languages & Infra: Python, SQL, TypeScript; AWS (SageMaker, Bedrock, Lambda, EC2), vLLM, llama.cpp, Ollama, OpenRouter, FastAPI, Flask, Next.js, Docker, Git/GitLab CI, PostgreSQL, MongoDB
